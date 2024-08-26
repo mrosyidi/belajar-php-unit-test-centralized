@@ -17,4 +17,14 @@
       $counter->increment();
       Assert::assertEquals(3, $counter->getCounter());
     }
+
+    /**
+    * @test
+    */
+    public function increment()
+    {
+      $counter = new Counter();
+      $counter->increment();
+      $this->assertEquals(1, $counter->getCounter());
+    }
   }
