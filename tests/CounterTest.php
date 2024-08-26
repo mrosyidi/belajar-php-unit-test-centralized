@@ -12,5 +12,9 @@
       $counter = new Counter();
       $counter->increment();
       Assert::assertEquals(1, $counter->getCounter());
+      $counter->increment();
+      Assert::assertEquals(2, $counter->getCounter());
+      $counter->increment();
+      Assert::assertEquals(3, $counter->getCounter());
     }
   }
