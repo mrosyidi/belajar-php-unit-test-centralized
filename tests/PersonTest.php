@@ -9,7 +9,11 @@
   {
     private Person $person;
 
-    public function setUp(): void
+    /**
+    * @before
+    */
+
+    public function createPerson(): void
     {
       $this->person = new Person("Eko");
     }
