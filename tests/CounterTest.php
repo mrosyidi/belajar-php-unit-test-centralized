@@ -7,15 +7,21 @@
 
   class CounterTest extends TestCase
   {
+    private Counter $counter;
+
+    public function setUp(): void
+    {
+      $this->counter = new Counter();
+    }
+
     public function testCounter()
     {
-      $counter = new Counter();
-      $counter->increment();
-      Assert::assertEquals(1, $counter->getCounter());
-      $counter->increment();
-      $this->assertEquals(2, $counter->getCounter());
-      $counter->increment();
-      self::assertEquals(3, $counter->getCounter());
+      $this->counter->increment();
+      Assert::assertEquals(1, $this->counter->getCounter());
+      $this->counter->increment();
+      $this->assertEquals(2, $this->counter->getCounter());
+      $this->counter->increment();
+      self::assertEquals(3, $this->counter->getCounter());
     }
 
     /**
@@ -23,17 +29,15 @@
     */
     public function increment()
     {
-      $counter = new Counter();
-      $counter->increment();
-      $this->assertEquals(1, $counter->getCounter());
+      $this->counter->increment();
+      $this->assertEquals(1, $this->counter->getCounter());
     }
 
     public function testFirst(): Counter
     {
-      $counter = new Counter();
-      $counter->increment();
-      $this->assertEquals(1, $counter->getCounter());
-      return $counter;
+      $this->counter->increment();
+      $this->assertEquals(1, $this->counter->getCounter());
+      return $this->counter;
     }
 
     /**
