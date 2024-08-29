@@ -14,6 +14,12 @@
       $this->counter = new Counter();
     }
 
+    public function testIncrement()
+    {
+      self::assertEquals(0, $this->counter->getCounter());
+      // TODO not complete
+    }
+
     public function testCounter()
     {
       $this->counter->increment();
