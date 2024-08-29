@@ -68,4 +68,21 @@
     {
       echo "After" . PHP_EOL;
     }
+
+    /**
+    * @requires OSFAMILY Windows
+    */
+    public function testOnlyWindows()
+    {
+      self::assertTrue(true, "Only in Windows");
+    }
+
+    /**
+    * @requires PHP >= 8
+    * @requires OSFAMILY Darwin
+    */
+    public function testOnlyForMacAndPHP8()
+    {
+      self::assertTrue(true, "Only for Mac and PHP 8");
+    }
   }
