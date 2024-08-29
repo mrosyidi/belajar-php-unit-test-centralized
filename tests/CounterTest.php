@@ -18,6 +18,7 @@
     {
       self::assertEquals(0, $this->counter->getCounter());
       self::markTestIncomplete("TODO not complete");
+      echo "TEST TEST";
     }
 
     public function testCounter()
