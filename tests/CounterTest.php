@@ -17,7 +17,7 @@
     public function testIncrement()
     {
       self::assertEquals(0, $this->counter->getCounter());
-      // TODO not complete
+      self::markTestIncomplete("TODO not complete");
     }
 
     public function testCounter()
